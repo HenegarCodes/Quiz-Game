@@ -90,3 +90,47 @@ h2 {
     transform: scale(1.03);
 }
 
+
+/*End Page*/
+
+.end-form-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 30rem;
+}
+
+input {
+    margin-bottom: 2rem ;
+    width: 22rem;
+    padding: 2rem;
+    font-size: 2rem;
+
+border: none;
+box-shadow: 0 0.1rem 1.4rem 0 rgba(86,185,235,0.5);
+}
+
+
+input::placeholder {
+    color: white;
+}
+
+#username {
+    margin-bottom: 3rem ;
+    width: 100%;
+    outline: none;
+}
+
+#final-text {
+    font-size: 3rem;
+    color: wheat;
+    text-align: center;
+}
+
+#saveScoreBtn
+ {
+    border: none;
+ }
+
+ 
