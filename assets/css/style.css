@@ -1,58 +1,34 @@
 :root{
     background-color: rgb(81, 76, 76)
 }
+body{
+    padding: 0;
+    margin: 0;
+width: 100vw;
+justify-content: center;
+   align-items: center;
+  height: 100vh;
+}
 
 * {
     box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-size: 57.5%;
+
     font-family: 'Times New Roman', Times, serif;
 }
 
-h1 {
-    font-size: 6rem;
-    color: whitesmoke;
-    margin-bottom: 4rem;
-}
 
-h2 {
-    font-size: 4rem;
-    margin-bottom: 3rem;
-}
 
 .container1 {
-    width: 100vh;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    max-width: 80rem;   
-    margin: 0 auto;
-    padding: 2rem;
-
+width: 900px;
+max-width: 75%;
+background-color: rgb(55, 51, 51);
+border-radius: 10px;
+padding: 20px;
 }
-
-.flex-column {
-    display: flex;
-    flex-direction: column;
-}
-
-.flex-center {
-    justify-content: center;
-    align-items: center;
-}
-
-.justify-center {
-    justify-content: center;
-}
-
-.text-center {
-    text-align: center;
-}
-
-.hidden {
-    display: hidden;
+.btn-G {
+    display: grid;
+    gap: 10px;
+    margin: 20px 0;
 }
 
 .btn {
@@ -73,64 +49,26 @@ h2 {
     transform: scale(1.03);
 }
 
-
-.btn[disabled]:hover {
-    cursor:not-allowed;
-    box-shadow: none;
-    transform: none;
+.startBtn, .nextBtn, .submitBtn {
+    font-size: medium;
+    font-weight: bolder;
+    padding: 15px 70px;
+}
+.option-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-#high-btn {
-    background: linear-gradient(90deg, rgba(145,145,145,1) 66%, rgba(145,145,145,1) 100%);
-}
-
-#high-btn:hover {
-    cursor: pointer;
-    box-shadow:10px 5px 5px rgb(156, 183, 167);
-    transform: scale(1.03);
+.timeFrame{
+    background-color: blue;
+    font-weight: bolder;
+    border: 1px black;
 }
 
 
 /*End Page*/
 
-.end-form-container {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    max-width: 30rem;
-}
 
-input {
-    margin-bottom: 2rem ;
-    width: 22rem;
-    padding: 2rem;
-    font-size: 2rem;
-
-border: none;
-box-shadow: 0 0.1rem 1.4rem 0 rgba(86,185,235,0.5);
-}
-
-
-input::placeholder {
-    color: white;
-}
-
-#username {
-    margin-bottom: 3rem ;
-    width: 100%;
-    outline: none;
-}
-
-#final-text {
-    font-size: 3rem;
-    color: wheat;
-    text-align: center;
-}
-
-#saveScoreBtn
- {
-    border: none;
- }
 
  

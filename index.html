@@ -14,15 +14,23 @@
     <body>
         <!--full container question, buttons, next, previous, submit-->
         <div class="container1">
-            <div id="home" class="flex-column flex-center">
-                <h1>Welcome to the Quiz Game!</h1>
-                <a href="play.html" class="btn">Play</a>
-                <a href="highscores.html" id="high-btn" class="btn">Highscores</a>
-
+            <div id="containerQ">Question</div>
+                
+              <div>Time Left <span id="timeLeft">1:00</span></div>
+              <div>Score <span id="score"></span></div>
+              <div id="btnAnswer" class="btn-G">
+              <button class="btn">Choice 1</button>
+              <button class="btn">Choice 2</button>
+              <button class="btn">Choice 3</button>
+              <button class="btn">Choice 4</button>
             </div>
-        
-        
-        </div>
+           </div>
+
+           <div class="option-bar">
+            <button id="startBtn" class="startBtn">Start</button>
+            <button id="nextBtn" class="nextBtn">Next</button>
+            <button id="submitBtn" class="submitBtn">Submit</button>
+           </div>
 
 
 
