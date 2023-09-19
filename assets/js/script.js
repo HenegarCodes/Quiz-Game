@@ -8,9 +8,9 @@ var questions = [
     },
 
     {
-        prompt: "How do you call a function?",
-        options: ["call myFunction()", "myFunction()", "call function myFunction", "Call.myFunction"],
-        answer: "myFunction()"
+        prompt: "What is HTML",
+        options: ["hypertext markup language", "help the makeup ladies", "how to make lettuce", "none"],
+        answer: "hypertext markup language"
     },
 
     {
@@ -57,7 +57,7 @@ var questions = [
     //quiz begin
 //sets increment of time with begnning screen and removes 
     function startQuiz () {
-        timerId = setInterval(timerTick, 1000);
+        timerId = setInterval(timerTick, 1500);
         timer.textContent = time;
         var beginningScreen = document.getElementById("beginn");
         beginningScreen.setAttribute('class', 'hidden');
@@ -85,7 +85,7 @@ var questions = [
 
         function questionClick() {
             if (this.value !== questions[currentQuestion1].answer){
-                time -= 10;
+                time -= 20;
                 if (time<0){
                     time = 0;
                 }
@@ -100,7 +100,7 @@ var questions = [
             promptF.setAttribute("class", "promptF");
             setTimeout(function() {
                 promptF.setAttribute("class", "PromptF");
-            }, 2000)
+            }, 3000)
             currentQuestion1++;
             if(currentQuestion1 == questions.length) {
                 quizEnd();
