@@ -19,6 +19,7 @@ If your README is long, add a table of contents to make it easy for users to fin
 Download Vs code or view in browser. or load utilizing live deployed link.
 
 ## Usage
+<img width="1460" alt="screenshot" src="https://github.com/HenegarCodes/Quiz-Game/assets/78831747/416e158a-58b0-4500-a445-715f87e30914">
 
 https://henegarcodes.github.io/Quiz-Game/
 
