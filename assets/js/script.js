@@ -38,7 +38,7 @@ var questions = [
     var optionsEl = document.querySelector('#optionDiv');
     var submit = document.querySelector('#submission');
     var start = document.querySelector('#start-Quiz');
-    var name = document.querySelector('#name');
+    var names = document.querySelector('#name');
     var restart = document.querySelector("#restart");
     var promptF = document.querySelector("#promptF");
 
@@ -124,7 +124,7 @@ var questions = [
         }
 
         function highscoreSaving() {
-            var name = name.value.trim();
+            var name = names.value.trim();
             if (name !== "") {
                 var highscore =
         JSON.parse(window.localStorage.getItem("highscore")) || [];
@@ -142,6 +142,6 @@ var questions = [
                 saveScore();
             }
         }
-        name.onkeyup = userSubmit;
+        names.onkeyup = userSubmit;
         submit.onclick = highscoreSaving;
         start.onclick = startQuiz;
