@@ -1,74 +1,73 @@
-:root{
-    background-color: rgb(81, 76, 76)
-}
-body{
-    padding: 0;
-    margin: 0;
-width: 100vw;
-justify-content: center;
-   align-items: center;
-  height: 100vh;
-}
-
 * {
-    box-sizing: border-box;
-
     font-family: 'Times New Roman', Times, serif;
 }
 
-
-
-.container1 {
-width: 900px;
-max-width: 75%;
-background-color: rgb(55, 51, 51);
-border-radius: 10px;
-padding: 20px;
-}
-.btn-G {
-    display: grid;
-    gap: 10px;
-    margin: 20px 0;
+p {
+    margin: 10px 10px;
 }
 
-.btn {
-    font-size: 3rem;
-    padding: 2.5rem 0;
-    width: 28rem;
+.begin {
     text-align: center;
-    margin-bottom: 1rem;
-    text-decoration: none;
-    color: black;
-    background: linear-gradient(90deg, rgb(239, 19, 19) 0%, rgb(240, 7, 7) 66%, rgba(209,10,10,1) 100%);
+}
+
+.high-Header {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.time-Left {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+button {
+    display: inline-block;
+    margin: 5px;
+    cursor: pointer;
+    color: white;
+    background-color: #515052;
     border-radius: 10px;
+    border: 0;
+    padding: 15px;
 }
 
-.btn:hover {
-    cursor: pointer;  
-    box-shadow: 10px 5px 5px rgb(156, 183, 167);
-    transform: scale(1.03);
+button:hover {
+    background-color: #9e99a1;
+}
+.optionDiv button {
+    display: block;
 }
 
-.startBtn, .nextBtn, .submitBtn {
-    font-size: medium;
-    font-weight: bolder;
-    padding: 15px 70px;
-}
-.option-bar {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+input[type="text"] {
+    font-size: 100%;
 }
 
-.timeFrame{
-    background-color: blue;
-    font-weight: bolder;
-    border: 1px black;
+.hidden {
+    display: none;
+}
+
+ol {
+    padding-left: 10px;
+    max-height: 500px;
+    overflow: auto;
+}
+  
+  li {
+    padding: 10px;
+    list-style: decimal inside none;
+}
+  
+  li:nth-child(odd) {
+    background-color: #dfdae7;
 }
 
 
-/*End Page*/
+@media screen and (max-width: 768px) {
 
+}
 
+@media screen and  (max-width: 575px) {
 
- 
+}

@@ -13,33 +13,38 @@
 
     <body>
         <!--full container question, buttons, next, previous, submit-->
-        <div class="container1">
-            <div id="containerQ">Question</div>
-                
-              <div>Time Left <span id="timeLeft">1:00</span></div>
-              <div>Score <span id="score"></span></div>
-              <div id="btnAnswer" class="btn-G">
-              <button class="btn">Choice 1</button>
-              <button class="btn">Choice 2</button>
-              <button class="btn">Choice 3</button>
-              <button class="btn">Choice 4</button>
+      <header>
+        <div>
+            <a href="high-score.html"><button class="high-header" id="highScoreHeader"></button>HighScores</a>
+        </div>
+        <div class="timeLeft">
+            <p>Time 
+                <span id="timeLeft"> 0</span>
+            </p>
+        </div>
+      </header>
+
+      <main class="quizContainer">
+        <div id="quiz-begin">
+            <div class="begin" id="begin">
+                <h1>Quiz Game</h1>
+                <p>Answer the following questions correctly. Any incorrect answers result in -10 seconds</p>
+                <button id="start-Quiz"> Begin Quiz</button>
             </div>
-           </div>
+        </div>
 
-           <div class="option-bar">
-            <button id="startBtn" class="startBtn">Start</button>
-            <button id="nextBtn" class="nextBtn">Next</button>
-            <button id="submitBtn" class="submitBtn">Submit</button>
-           </div>
-
-
-
-
-
-
-
-
-
+        <div class="hidden" id="question">
+            <h2 id="question-contain"></h2>
+            <div class="optionDiv" id="optionDiv"></div>
+        </div>
+<div class="hidden" id="end-quiz">
+    <h2>Quiz Concluded</h2>
+    <p>Your Score: <span id="finalScore"></span></p>
+    <p>Enter Name: <input type="text" id="name" max="4">
+    <button id="submission">Submit</button></p>
+</div>
+<div id="promptF" class="promptFHide"></div>
+      </main>
         <script src="./assets/js/script.js"></script>
     </body>
 </html>
