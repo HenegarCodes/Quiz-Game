@@ -1,3 +1,4 @@
+/*question array for the 4 questions in the quiz*/
 var questions = [
 
     {
@@ -33,6 +34,8 @@ var questions = [
         answer: "Lexical"
     }];
 
+    /*creating variables that are linked with the IDs in the index file*/
+
     var questionsEl = document.querySelector('#question');
     var timer = document.querySelector('#timeLeft');
     var optionsEl = document.querySelector('#optionDiv');
@@ -52,7 +55,7 @@ var questions = [
 
 
     //quiz begin
-
+//sets increment of time with begnning screen and removes 
     function startQuiz () {
         timerId = setInterval(timerTick, 1000);
         timer.textContent = time;
@@ -62,7 +65,7 @@ var questions = [
         getQuestion();
     }
 
-    //array loops questions
+    //array loops questions. creates variables to get the questions and choices for them to appear on the screen after finishing the previous questions
 
     function getQuestion() {
         var currentQuestion = questions[currentQuestion1];
@@ -78,7 +81,7 @@ var questions = [
         })
             
         }
-    
+    //creates a function for getting the question qron which is -10 seconds as well as has it for correct questions
 
         function questionClick() {
             if (this.value !== questions[currentQuestion1].answer){
@@ -105,7 +108,7 @@ var questions = [
                 getQuestion();
             }
         }
-
+//when finished with the quiz this clears out timer, gets rid of questions and answers and gives the final score. 
         function quizEnd(){
             clearInterval(timerId);
             var finalScreen = document.getElementById("end-quiz");
@@ -122,7 +125,7 @@ var questions = [
                 quizEnd();
             }
         }
-
+//gives function to enter name for your highscore and trims it down so there is no whitespace. also creates an item to store via localstorage
         function highscoreSaving() {
             var name = names.value.trim();
             if (name !== "") {
@@ -136,12 +139,12 @@ var questions = [
       window.localStorage.setItem("highscore", JSON.stringify(highscore));
             }
         }
-
+//submit function for the highscore list
         function userSubmit (event){
             if(event.key =="Enter"){
                 saveScore();
             }
-        }
+        }//optional buttons on highscore screen
         names.onkeyup = userSubmit;
         submit.onclick = highscoreSaving;
         start.onclick = startQuiz;

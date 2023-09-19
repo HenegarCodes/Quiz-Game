@@ -12,7 +12,6 @@
 
 
     <body>
-        <!--full container question, buttons, next, previous, submit-->
       <header>
         <div>
             <a href="high-score.html"><button class="high-header" id="highScoreHeader"></button>HighScores</a>
@@ -23,7 +22,7 @@
             </p>
         </div>
       </header>
-
+<!-- actually container encassing the whole quiz-->
       <main class="quizContainer">
         <div id="quiz-begin">
             <div class="begin" id="beginn">
@@ -32,11 +31,16 @@
                 <button id="start-Quiz"> Begin Quiz</button>
             </div>
         </div>
+<!--gives answers and question containers-->
 
         <div class="hidden" id="question">
             <h2 id="question-Contain"></h2>
             <div class="optionDiv" id="optionDiv"></div>
         </div>
+
+
+        <!--end of quiz/submit-->
+
 <div class="hidden" id="end-quiz">
     <h2>Quiz Concluded</h2>
     <p>Your Score: <span id="finalScore"></span></p>
