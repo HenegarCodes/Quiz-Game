@@ -1,36 +1,39 @@
 var questions = [
 
     {
-        prompt: "Inside which ",
-        options: ["<javascript>", "<js>", "<script>", "<scripting>"],
+        prompt: "Which is a primitive type in Javascript?",
+        options: ["Paragraphs", "Elements", "Signs", "Numbers"],
         answer: "<script>"
     },
 
     {
-        prompt: "How do you call ",
+        prompt: "How do you call a function?",
         options: ["call myFunction()", "myFunction()", "call function myFunction", "Call.myFunction"],
         answer: "myFunction()"
     },
 
     {
-        prompt: "How does a fo",
-        options: ["for (i = 0; i <= 5; i++)", "for (i = 0; i <= 5)", "for i = 1 to 5", " for (i <= 5; i++)"],
-        answer: "for (i = 0; i <= 5; i++)"
+        prompt: "What is JavaScript?",
+        options: ["JavaScript is a scripting language used to make the website interactive", 
+        "it is an assembly language used for workers on assembly lines",
+         "it compiles to make websites interact", "none"],
+        answer: "JavaScript is a scripting language used to make the website interactive"
     },
 
     {
-        prompt: "?",
-        options: ["|", "&&", "%", "/"],
-        answer: "&&" 
+        prompt: " Which of the following is correct about JavaScript?",
+        options: ["JavaScript is an Object-Based language",
+         "JavaScript is an Object-Oriented language", "Javascript is a language that helps heal people", "none"],
+        answer: "JavaScript is an Object-Based language" 
     },
 
     {
-        prompt: " to store and retrieve d___.",
-        options: ["method", "assignment operator", "variable", "string"],
-        answer: "variable"
+        prompt: "Which of the following scoping type does JavaScript use?",
+        options: ["Lexical", "Chronological", "Sequencing", "unordered lists"],
+        answer: "Lexical"
     }];
 
-    var questions = document.querySelector('#questions');
+    var questionsEl = document.querySelector('#questions');
     var timer = document.querySelector('#timeLeft');
     var options = document.querySelector('#optionDiv');
     var submit = document.querySelector('#submission');
@@ -51,11 +54,11 @@ var questions = [
     //quiz begin
 
     function startQuiz () {
-        timerId = setInterval(clockTick, 1000);
+        timerId = setInterval(timerTick, 1000);
         timer.textContent = time;
-        var beginningScreen = document.getElementById("begin");
-        beginningScreen.setAttribute('class', 'hide');
-        questions.removeAttribute("class");
+        var beginningScreen = document.getElementById("beginn");
+        beginningScreen.setAttribute('class', 'hidden');
+        questionsEl.removeAttribute('class');
         getQuestion();
     }
 
@@ -66,7 +69,7 @@ var questions = [
         var qPrompt = document.getElementById("question-contain");
         qPrompt.textContent = currentQuestion.prompt;
         options.innerHTML = "";
-        currentQuestio.options.forEach(function(choice, i) {
+        currentQuestion.options.forEach(function(choice, i) {
             var optionButton = document.createElement("button");
             optionButton.setAttribute("value", choice);
             optionButton.onclick = questionClick;
@@ -108,7 +111,7 @@ var questions = [
             finalScreen.removeAttribute("class");
             var finalScore = document.getElementById("finalScore");
             finalScore.textContent = time;
-            questions.setAttribute("class", "hidden");
+            questionsEl.setAttribute("class", "hidden");
         }
 
         function timerTick() {
@@ -119,7 +122,7 @@ var questions = [
             }
         }
 
-        function HighscoreSaving() {
+        function highscoreSaving() {
             var name = name.value.trim();
             if (name !== "") {
                 var highscore =
@@ -139,5 +142,5 @@ var questions = [
             }
         }
         name.onkeyup = userSubmit;
-        submit.onclick = saveScore;
+        submit.onclick = highscoreSaving;
         start.onclick = startQuiz;
