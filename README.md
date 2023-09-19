@@ -20,7 +20,7 @@ Download Vs code or view in browser. or load utilizing live deployed link.
 
 ## Usage
 
-
+https://henegarcodes.github.io/Quiz-Game/
 
 ## Credits
 
