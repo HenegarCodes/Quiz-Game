@@ -34,7 +34,7 @@ var questions = [
         answer: "Lexical"
     }];
 
-    /*creating variables that are linked with the IDs in the index file*/
+    /*creating variables that are linked with the IDs in the index file/element*/
 
     var questionsEl = document.querySelector('#question');
     var timer = document.querySelector('#timeLeft');
@@ -51,13 +51,13 @@ var questions = [
     //Quiz
     var currentQuestion1 = 0;
     var time = questions.length * 15;
-    var timerId;
+    var timerIdentifcator;
 
 
     //quiz begin
 //sets increment of time with begnning screen and removes 
     function startQuiz () {
-        timerId = setInterval(timerTick, 1500);
+        timerIdentifcator = setInterval(timerTick, 1500);
         timer.textContent = time;
         var beginningScreen = document.getElementById("beginn");
         beginningScreen.setAttribute('class', 'hidden');
@@ -110,11 +110,11 @@ var questions = [
         }
 //when finished with the quiz this clears out timer, gets rid of questions and answers and gives the final score. 
         function quizEnd(){
-            clearInterval(timerId);
-            var finalScreen = document.getElementById("end-quiz");
-            finalScreen.removeAttribute("class");
-            var finalScore = document.getElementById("finalScore");
-            finalScore.textContent = time;
+            clearInterval(timerIdentifcator);
+            var screenF= document.getElementById("end-quiz");
+            screenF.removeAttribute("class");
+            var scoreF = document.getElementById("finalScore");
+            scoreF.textContent = time;
             questionsEl.setAttribute("class", "hidden");
         }
 
