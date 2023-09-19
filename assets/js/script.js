@@ -33,20 +33,20 @@ var questions = [
         answer: "Lexical"
     }];
 
-    var questionsEl = document.querySelector('#questions');
+    var questionsEl = document.querySelector('#question');
     var timer = document.querySelector('#timeLeft');
     var options = document.querySelector('#optionDiv');
     var submit = document.querySelector('#submission');
-    var  start = document.querySelector('#start-Quiz');
+    var start = document.querySelector('#start-Quiz');
     var name = document.querySelector('#name');
     var restart = document.querySelector("#restart");
-    var promptF = document.querySelector("promptF");
+    var promptF = document.querySelector("#promptF");
 
 
     //DOM
 
     //Quiz
-    var currentQuestion = 0;
+    var currentQuestion1 = 0;
     var time = questions.length * 15;
     var timerId;
 
@@ -65,9 +65,9 @@ var questions = [
     //array loops questions
 
     function getQuestion() {
-        var currentQuestion = questions[currentQuestion];
-        var qPrompt = document.getElementById("question-contain");
-        qPrompt.textContent = currentQuestion.prompt;
+        var currentQuestion = questions[currentQuestion1];
+        var promptEl = document.getElementById("question-Contain");
+        promptEl.textContent = currentQuestion.prompt;
         options.innerHTML = "";
         currentQuestion.options.forEach(function(choice, i) {
             var optionButton = document.createElement("button");
@@ -80,13 +80,13 @@ var questions = [
     
 
         function questionClick() {
-            if (this.value !== questions[currentQuestion].answer){
+            if (this.value !== questions[currentQuestion1].answer){
                 time -= 10;
                 if (time<0){
                     time = 0;
                 }
                 timer.textContent = time;
-                promptF.textContent = `wrong, correct answer is ${questions[currentQuestion].answer}`;
+                promptF.textContent = `wrong, correct answer is ${questions[currentQuestion1].answer}.`;
                 promptF.style.color = "red";
 
             } else {
@@ -97,8 +97,8 @@ var questions = [
             setTimeout(function() {
                 promptF.setAttribute("class", "PromptF");
             }, 2000)
-            currentQuestion++;
-            if(currentQuestion == questions.length) {
+            currentQuestion1++;
+            if(currentQuestion1 == questions.length) {
                 quizEnd();
             }else {
                 getQuestion();
