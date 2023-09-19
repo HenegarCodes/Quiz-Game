@@ -3,7 +3,7 @@ var questions = [
     {
         prompt: "Which is a primitive type in Javascript?",
         options: ["Paragraphs", "Elements", "Signs", "Numbers"],
-        answer: "<script>"
+        answer: "Numbers"
     },
 
     {
@@ -35,7 +35,7 @@ var questions = [
 
     var questionsEl = document.querySelector('#question');
     var timer = document.querySelector('#timeLeft');
-    var options = document.querySelector('#optionDiv');
+    var optionsEl = document.querySelector('#optionDiv');
     var submit = document.querySelector('#submission');
     var start = document.querySelector('#start-Quiz');
     var name = document.querySelector('#name');
@@ -68,12 +68,13 @@ var questions = [
         var currentQuestion = questions[currentQuestion1];
         var promptEl = document.getElementById("question-Contain");
         promptEl.textContent = currentQuestion.prompt;
-        options.innerHTML = "";
+        optionsEl.innerHTML = "";
         currentQuestion.options.forEach(function(choice, i) {
             var optionButton = document.createElement("button");
             optionButton.setAttribute("value", choice);
+            optionButton.textContent = i + 1 + ". " + choice;
             optionButton.onclick = questionClick;
-            options.appendChild(optionButton);
+            optionsEl.appendChild(optionButton);
         })
             
         }
